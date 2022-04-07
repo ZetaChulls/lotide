@@ -35,7 +35,6 @@ const eqObjects = function(object1, object2) {
   // check to see if object 1 and object 2 have the same amount of keys.
   if (object1Keys.length !== object2Keys.length) return false;
 
-
   // check the keys then the values to see if they have non-matching elements.
   for (let keys of object1Keys) {
     // Also check to see if either of the values are arrays. If so, run eqArray instead of checking the values directly
