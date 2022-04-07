@@ -22,7 +22,7 @@ const assertEqual = function(actual, expected) {
 //     if (item === value) {
 //       return objectKeys[index];
 //     }
-//     index++ 
+//     index++
 //   }
 
 //   return result;
@@ -36,11 +36,11 @@ const findKeyByValue = function(obj, item) {
       return key;
     }
   }
-}
+};
 
 
-const bestTVShowsByGenre = { 
-  sci_fi: "The Expanse",
+const bestTVShowsByGenre = {
+  scifi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",
   drama:  "The Wire",
   action: "The Dark Knight",

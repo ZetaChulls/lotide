@@ -10,12 +10,12 @@ const assertEqual = function(actual, expected) {
 
 // A function that takes a sentence and returns a count for how often that letter appears in the sentence.
 
-// Function declaration 
-const countLetters = function (sentence) {
+// Function declaration
+const countLetters = function(sentence) {
   // Declare output variable.
   const output = {};
   // Remove all spaces from the strings
-  longSentence = sentence.replaceAll(' ', '');
+  const longSentence = sentence.replaceAll(' ', '');
   // Loop through the long string.
   for (let char of longSentence) {
     // If the letter has appeared, increment the counter for that letter by 1
@@ -28,13 +28,13 @@ const countLetters = function (sentence) {
   }
   // Return an object which has the keys as the letters present and the value as how often they appeared.
   return output;
-}
+};
 
   
 
 
 
-words = countLetters("hello");
+const words = countLetters("hello");
 
 assertEqual(words.h, 1);
 assertEqual(words.e, 1);
