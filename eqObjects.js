@@ -40,7 +40,9 @@ const eqObjects = function(object1, object2) {
   for (let keys of object1Keys) {
     // Also check to see if either of the values are arrays. If so, run eqArray instead of checking the values directly
     if (Array.isArray(object1[keys]) || Array.isArray(object1[keys])) {
-      return eqArrays(object1[keys], object2[keys]);
+      if (!eqArrays(object1[keys], object2[keys])){
+        return false;
+      }
     // compare the values in each key to ensure it's the same.
     } else if (!object2Keys.includes(keys) || !object2[keys].includes(object1[keys])) {
       return false;
