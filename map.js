@@ -25,19 +25,19 @@ const assertArraysEqual = function(actual, expected) {
 // Function to perform mapping on all array elements.
 const map = function(array, callback) {
   const results = [];
-  for(let item of array) {
+  for (let item of array) {
     results.push(callback(item));
   }
   return results;
-}
+};
 
 const words = ["ground", "control", "to", "major", "tom"];
 const results1 = map(words, word => word[0]);
 console.log(results1);
 
 const testArray1 = ['bacon', 'gravy', 'soda'];
-const testArray2 = [1, 2, 3]
-const testArray3 = [3, 2, 1]
+const testArray2 = [1, 2, 3];
+const testArray3 = [3, 2, 1];
 
 
 assertArraysEqual(map(testArray1, word => word[0]), ['b', 'g', 's']);

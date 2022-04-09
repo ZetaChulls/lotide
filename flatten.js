@@ -5,7 +5,7 @@ const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
   }
-// iterate through the array and compare the values at the same index. If any values dont match, return false;
+  // iterate through the array and compare the values at the same index. If any values dont match, return false;
   for (let i = 0; i < array1.length; i++) {
     if (array1[i] !== array2[i]) {
       return false;
@@ -14,7 +14,7 @@ const eqArrays = function(array1, array2) {
   return true;
 };
 
-// helper function to check for assertion in arrays. 
+// helper function to check for assertion in arrays.
 const assertArraysEqual = function(actual, expected) {
   if (eqArrays(actual, expected)) {
     console.log(`✅✅✅ Assertion Passed: [${actual}] === [${expected}]`);
@@ -29,7 +29,7 @@ const assertArraysEqual = function(actual, expected) {
 const flatten = function(array) {
   let output = [];
   for (let item of array) {
-    if (Array.isArray(item)){
+    if (Array.isArray(item)) {
       item.forEach((element => output.push(element)));
     } else {
       output.push(item);

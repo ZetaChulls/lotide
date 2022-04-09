@@ -12,7 +12,7 @@ const assertEqual = function(actual, expected) {
 
 const countOnly = function(allItems, itemsToCount) {
   // check to see if valid arguement types are used in the function first.
-  if ( !Array.isArray(allItems) || !itemsToCount instanceof Object) return "Error, check arguement types in countOnly";
+  if (!Array.isArray(allItems) || !(itemsToCount instanceof Object)) return "Error, check arguement types in countOnly";
 
   let countedItems = {};
 
@@ -27,7 +27,7 @@ const countOnly = function(allItems, itemsToCount) {
   }
   console.log(countedItems);
   return countedItems;
-}
+};
 
 const firstNames = [
   "Karl",
