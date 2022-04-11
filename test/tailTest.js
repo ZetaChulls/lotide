@@ -16,14 +16,14 @@ describe("#tail", () => {
   });
 
   
-  it("Will return undefined if passed a single item in an array", () => {
+  it("Will return an empty array if passed a single item in an array", () => {
     const words = ["Knicks"];
-    assert.strictEqual(tail(words)[0], undefined);
+    assert.deepEqual(tail(words), []);
   });
 
-  it("Will return undefined if passed an empty array", () => {
+  it("Will return an empty array if passed an empty array", () => {
     const words = [];
-    assert.strictEqual(tail(words)[0], undefined);
+    assert.deepEqual(tail(words), []);
   });
 
 });
