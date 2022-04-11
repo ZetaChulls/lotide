@@ -40,3 +40,5 @@ assertEqual(words.h, 1);
 assertEqual(words.e, 1);
 assertEqual(words.l, 2);
 assertEqual(words.o, 1);
+
+module.exports = countLetters;

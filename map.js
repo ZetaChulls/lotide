@@ -43,3 +43,6 @@ const testArray3 = [3, 2, 1];
 assertArraysEqual(map(testArray1, word => word[0]), ['b', 'g', 's']);
 assertArraysEqual(map(testArray2, num => num * 2), [2, 4, 6]);
 assertArraysEqual(map(testArray3, num => num > 2), [true, false, false]);
+
+
+module.exports = map;
