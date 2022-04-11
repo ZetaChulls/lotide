@@ -1,14 +1,30 @@
 // Importing function to test.
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 const tail = require('../tail');
 
-// Sample words to test with
-const words = ["Knicks", "Nets", "Jazz", "Lakers", "Kings", "Spurs"];
 
-// Checking to see if the function modifies the original array.
-let result = tail(words);
+describe("#tail", () => {
+  it("Will be array.length - 1 after running tail", () => {
+    const words = ["Knicks", "Nets", "Jazz", "Lakers", "Kings", "Spurs"];
+    const output = tail(words).length;
+    assert.strictEqual(output, 5);
+  });
+  
+  it("Will return an array without it's head", () => {
+    const words = ["Knicks", "Nets", "Jazz", "Lakers", "Kings", "Spurs"];
+    assert.deepEqual(tail(words), ["Nets", "Jazz", "Lakers", "Kings", "Spurs"]);
+  });
 
-// Test cases
-assertEqual(words.length, 6);
-assertEqual(result[0], "Nets");
-assertEqual(result[4], "Spurs");
+  
+  it("Will return undefined if passed a single item in an array", () => {
+    const words = ["Knicks"];
+    assert.strictEqual(tail(words)[0], undefined);
+  });
+
+  it("Will return undefined if passed an empty array", () => {
+    const words = [];
+    assert.strictEqual(tail(words)[0], undefined);
+  });
+
+});
+
