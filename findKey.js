@@ -6,9 +6,9 @@ const assertEqual = function(actual, expected) {
   } else {
     console.log(`🛑🛑🛑 Assertion Failed: [${actual}] !== [${expected}]`);
   }
-}
+};
 
-// Function that takes an object and a callback. Will scan the object and 
+// Function that takes an object and a callback. Will scan the object and
 // return the first key when the callback is truthy if no key found, return undefined
 
 const findKey = (object, callback) => {
@@ -19,7 +19,7 @@ const findKey = (object, callback) => {
       return key;
     }
   }
-}
+};
 
 
 // Test samples
@@ -30,6 +30,6 @@ const testItem = findKey({
   "elBulli":   { stars: 3 },
   "Ora":       { stars: 2 },
   "Akelarre":  { stars: 3 }
-}, x => x.stars === 2) // => "noma"
+}, x => x.stars === 2); // => "noma"
 
 assertEqual(testItem, "noma");
