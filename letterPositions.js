@@ -1,31 +1,3 @@
-// Helper functions for assertion
-
-const eqArrays = function(array1, array2) {
-  // check if the arrays are the same length first
-  if (array1.length !== array2.length) {
-    return false;
-  }
-  // iterate through the array and compare the values at the same index. If any values dont match, return false;
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-
-const assertArraysEqual = function(actual, expected) {
-  if (eqArrays(actual, expected)) {
-    console.log(`✅✅✅ Assertion Passed: [${actual}] === [${expected}]`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: [${actual}] !== [${expected}]`);
-  }
-};
-
-// Function that takes in a sentence and outputs and object indicating where those letters appear based on their indices
-// { l: [0], i: [1, 11], g: [2] ....}
-
-
 // Declare the function, will accept a string as an input
 const letterPositions = function(sentence) {
   // implement error handling for correct input type.
@@ -47,11 +19,5 @@ const letterPositions = function(sentence) {
   // Output will be an object with letters as the keys and arrays of indices as the values.
   return output;
 };
-
-
-assertArraysEqual(letterPositions("testing").t, [0, 3]);
-assertArraysEqual(letterPositions("testing").s, [2]);
-assertArraysEqual(letterPositions("testing").e, [1]);
-
 
 module.exports = letterPositions;
