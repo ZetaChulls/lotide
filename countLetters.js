@@ -1,13 +1,3 @@
-// Helper function for assertion
-
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: [${actual}] === [${expected}]`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: [${actual}] !== [${expected}]`);
-  }
-};
-
 // A function that takes a sentence and returns a count for how often that letter appears in the sentence.
 
 // Function declaration
@@ -29,16 +19,5 @@ const countLetters = function(sentence) {
   // Return an object which has the keys as the letters present and the value as how often they appeared.
   return output;
 };
-
-  
-
-
-
-const words = countLetters("hello");
-
-assertEqual(words.h, 1);
-assertEqual(words.e, 1);
-assertEqual(words.l, 2);
-assertEqual(words.o, 1);
 
 module.exports = countLetters;

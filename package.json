@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@charlesvngo/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "mini-clone of lodash created for learning purposes",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/ZetaChulls/lotide.git"
   },
-  "author": "",
+  "author": "Charles Ngo",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ZetaChulls/lotide/issues"

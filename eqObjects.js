@@ -24,7 +24,6 @@ const eqArrays = function(array1, array2) {
 };
   
 // Returns true if both objects have identical key-value pairs
-// Otherwise will return a big fat false! >:D
 
 const eqObjects = function(object1, object2) {
   // first handle objects of primitaves
